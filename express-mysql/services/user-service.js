@@ -62,10 +62,10 @@ export const updateUser = async (user) => {
         user.password,
         user.imageUrl,
         new Date(),
-        user.id,
+        user.userid,
       ]
     );
-    const result = await getUser(id);
+    const result = await getUser(user.userid);
     return result;
   } catch (e) {
     console.error(e);

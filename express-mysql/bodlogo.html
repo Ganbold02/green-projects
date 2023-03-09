@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let grid = [
+        [0, 1, 0, 0], //1 // 00 10 20 30 // 01
+        [1, 1, 1, 0],
+        [0, 1, 0, 0],
+        [1, 1, 0, 0],
+      ];
+      let perimeter = 0;
+      let height = grid[0].length;
+
+      for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[0].length; j++) {
+          if (grid[i][j] === 1) {
+            console.log(i, j);
+            let tilePrem = 4;
+
+            // end 4 talaa 1 burchlen shalgana
+            if (i > 0 && grid[i - 1][j] == 1) {
+              perimeter--;
+            }
+            if (i < height - 1 && grid[i + 1][j] == 1) {
+              perimeter--;
+            }
+            if (grid[i][j - 1] == 1) {
+              perimeter--;
+            }
+            if (grid[i][j + 1] == 1) {
+              perimeter--;
+            }
+
+            perimeter += tilePrem;
+          }
+        }
+      }
+
+      console.log(perimeter);
+    </script>
+  </body>
+</html>

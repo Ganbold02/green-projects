@@ -4,6 +4,7 @@ import {
   deleteUser,
   getUser,
   getUsers,
+  updateUser,
 } from "../services/user-service.js";
 
 const router = express.Router();
@@ -38,4 +39,21 @@ router.post("/", async (req, res) => {
   );
 });
 
+router.put("/:userid", async (req, res) => {
+  const { userid } = req.params;
+  const { firstName, lastName, birthDate, email, phone, password, imageUrl } =
+    req.body;
+  res.json(
+    await updateUser({
+      userid,
+      firstName,
+      lastName,
+      birthDate,
+      email,
+      phone,
+      password,
+      imageUrl,
+    })
+  );
+});
 export default router;
