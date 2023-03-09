@@ -1,11 +1,14 @@
 GET http://localhost:8000/users
 
 ###
+GET http://localhost:8000/users/FrS1ifV8B8cvsP3F6jkuw
+
+###
 POST http://localhost:8000/users
 content-type: application/json
 
 {
-    "firstName":"dulguun",
+    "firstName":"Namuunaa",
     "lastName": "Backend",
     "birthDate" : "1998-07-11",
     "email": "temuulen.m@pinecone.mn",
@@ -15,11 +18,7 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:8000/users/FrS1ifV8B8cvsP3F6jkuw
-
-
-###
-DELETE http://localhost:8000/users/kOvAYMPsNp5CgdiOPtpRy
+DELETE http://localhost:8000/users/ZILSYCBnLaRQtQStdNScF
 
 ###
 put http://localhost:8000/users/0n7eGqULwBtCIv-xpXlgn
@@ -30,7 +29,7 @@ content-type: application/json
     "lastName": "Backend",
     "birthDate" : "1998-07-11",
     "email": "temuulen.m@pinecone.mn",
-    "phone": "96667432",
+    "phone": "99978722",
     "password": "",
     "imageUrl": ""
 }
